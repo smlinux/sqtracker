@@ -87,10 +87,9 @@ const TorrentList = ({
         }))}
         columns={[
           {
-            header: `${getLocaleString("uploadName")}`,
             accessor: "name",
             cell: ({ value, row }) => (
-              <Text title={value}>
+              <Text title={value} fontSize={0}>
                 {value}
                 {row.fetchedBy?.bookmarked && (
                   <Box as={Bookmark} size={16} color="primary" ml={2} />
@@ -102,95 +101,63 @@ const TorrentList = ({
                 )}
               </Text>
             ),
-            gridWidth: "minmax(150px, 2fr)",
+            gridWidth: "minmax(160px, 2fr)",
           },
           {
-            header: `${getLocaleString("uploadCategory")}`,
-            accessor: "type",
-            cell: ({ value }) => {
-              const category =
-                Object.keys(categories).find(
-                  (c) => slugify(c, { lower: true }) === value
-                ) || "None";
-              return (
-                <Text icon={ListUl} title={category}>
-                  {category}
-                </Text>
-              );
-            },
-            gridWidth: "minmax(75px, 1fr)",
-          },
-          {
-            header: `${getLocaleString("torrSeeders")}`,
             accessor: "seeders",
             cell: ({ value }) => (
               <Text
+                fontSize={0}
                 icon={Upload}
                 iconTextWrapperProps={{ justifyContent: "flex-end" }}
               >
                 {value !== undefined ? value : "?"}
               </Text>
             ),
-            gridWidth: "100px",
+            gridWidth: "60px",
             rightAlign: true,
             sortable: !!token,
           },
           {
-            header: `${getLocaleString("torrLeechers")}`,
             accessor: "leechers",
             cell: ({ value }) => (
               <Text
+                fontSize={0}
                 icon={Download}
                 iconTextWrapperProps={{ justifyContent: "flex-end" }}
               >
                 {value !== undefined ? value : "?"}
               </Text>
             ),
-            gridWidth: "100px",
+            gridWidth: "60px",
             rightAlign: true,
             sortable: !!token,
           },
           {
-            header: `${getLocaleString("torrDownloads")}`,
-            accessor: "downloads",
-            cell: ({ value }) => (
-              <Text
-                icon={File}
-                iconTextWrapperProps={{ justifyContent: "flex-end" }}
-              >
-                {value || 0}
-              </Text>
-            ),
-            gridWidth: "115px",
-            rightAlign: true,
-            sortable: !!token,
-          },
-          {
-            header: `${getLocaleString("userComments")}`,
             accessor: "comments.count",
             cell: ({ value }) => (
               <Text
+                fontSize={0}
                 icon={Chat}
                 iconTextWrapperProps={{ justifyContent: "flex-end" }}
               >
                 {value || 0}
               </Text>
             ),
-            gridWidth: "110px",
+            gridWidth: "60px",
             rightAlign: true,
             sortable: !!token,
           },
           {
-            header: `${getLocaleString("torrUploaded")}`,
             accessor: "created",
             cell: ({ value }) => (
-              <Text>
+              <Text fontSize={0}>
                 {moment(value).format(
                   `${getLocaleString("userUserSinceTime")}`
                 )}
               </Text>
             ),
-            gridWidth: "140px",
+            gridWidth: "100px",
             rightAlign: true,
             sortable: !!token,
           },
