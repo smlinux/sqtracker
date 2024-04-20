@@ -295,6 +295,16 @@ const Navigation = ({ isMobile, menuIsOpen, setMenuIsOpen }) => {
         borderColor="border"
         p={3}
       >
+        <Text color="primary" fontSize={0}>
+          <Link href="/rules" passHref>
+            <a>{getLocaleString("ruleRules")}</a>
+          </Link>
+        </Text>
+        <Text color="primary" fontSize={0}>
+          <Link href="/copyright" passHref>
+            <a>{getLocaleString("copyrightHolders")}</a>
+          </Link>
+        </Text>
         <Text color="grey" fontSize={0}>
           {getLocaleString("poweredBy")}{" "}
           <a

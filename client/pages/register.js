@@ -121,7 +121,18 @@ const Register = ({ token: inviteToken, tokenError }) => {
             mb={4}
             required
           />
-          <Button>{getLocaleString("register")}</Button>
+        <Text as="h4" mb={5}>
+          {getLocaleString("registerIAgree")}{" "}
+          <a
+            href="/rules"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {getLocaleString("ruleRules")}{" "}
+          </a>
+          {getLocaleString("registerClickBelowButton")}
+        </Text>
+        <Button>{getLocaleString("register")}</Button>
         </form>
       ) : (
         <Box
