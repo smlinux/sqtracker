@@ -35,9 +35,9 @@ const getThemeColours = (themeName, customTheme = {}) => {
     case "light":
       return {
         primary: customTheme.primary ?? "#f45d48",
-        background: customTheme.background ?? "#ffffff",
-        sidebar: customTheme.sidebar ?? "#f8f8f8",
-        border: customTheme.border ?? "#deebf1",
+        background: customTheme.background ?? "#fff3ee",
+        sidebar: customTheme.sidebar ?? "#fff2ee",
+        border: customTheme.border ?? "#fbbfb7",
         text: customTheme.text ?? "#202224",
         grey: customTheme.grey ?? "#747474",
         error: "#f33",
@@ -407,27 +407,27 @@ const SqTracker = ({ Component, pageProps, initialTheme }) => {
                           ref={searchRef}
                         />
                       </Box>
-                      {allowThemeToggle && (
-                        <Button
-                          variant="secondary"
-                          onClick={() => {
-                            setThemeAndSave(
-                              theme === "light" ? "dark" : "light"
-                            );
-                          }}
-                          width="40px"
-                          px={2}
-                          py={2}
-                          ml={3}
-                        >
-                          {theme === "light" ? (
-                            <Sun size={24} />
-                          ) : (
-                            <Moon size={24} />
-                          )}
-                        </Button>
-                      )}
                     </Box>
+                  )}
+                  {allowThemeToggle && (
+                    <Button
+                      variant="secondary"
+                      onClick={() => {
+                        setThemeAndSave(
+                          theme === "light" ? "dark" : "light"
+                        );
+                      }}
+                      width="40px"
+                      px={2}
+                      py={2}
+                      ml={3}
+                    >
+                      {theme === "light" ? (
+                        <Sun size={24} />
+                      ) : (
+                        <Moon size={24} />
+                      )}
+                    </Button>
                   )}
                 </Box>
               </Box>
