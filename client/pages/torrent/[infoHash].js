@@ -578,16 +578,16 @@ const Torrent = ({ token, torrent = {}, userId, userRole, uid, userStats }) => {
               >
                 {getLocaleString("reqDelete")}
               </Button>
+              <Button onClick={handleToggleFreeleech} variant="secondary" mr={3}>
+                {isFreeleech
+                  ? `${getLocaleString("torrUnset")}`
+                  : `${getLocaleString("torrSet")}`}{" "}
+                {getLocaleString("torrFreeleech")}
+              </Button>
             </>
           )}
-          {userRole === "admin" && (
-            <Button onClick={handleToggleFreeleech} variant="secondary" mr={3}>
-              {isFreeleech
-                ? `${getLocaleString("torrUnset")}`
-                : `${getLocaleString("torrSet")}`}{" "}
-              {getLocaleString("torrFreeleech")}
-            </Button>
-          )}
+        </Box>
+        <Box display="flex" alignItems="center" ml={3}>
           {userId ? (
             <Button
               as="a"
