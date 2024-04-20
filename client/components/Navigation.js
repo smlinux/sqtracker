@@ -314,7 +314,14 @@ const Navigation = ({ isMobile, menuIsOpen, setMenuIsOpen }) => {
           >
             ■ sqtracker
           </a>{" "}
-          v{SQ_VERSION}
+          v
+          <a
+            href="https://github.com/smlinux/sqtracker/tree/bt.dansh.ru"
+            target="_blank"
+            rel="noreferrer"
+          >
+            GIT
+          </a>
         </Text>
         <LocaleSelector
           value={locale}
