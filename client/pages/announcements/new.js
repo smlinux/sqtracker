@@ -78,7 +78,7 @@ const NewAnnouncement = ({ token, userRole }) => {
   return (
     <>
       <SEO title={getLocaleString("annNewAnnounce")} />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {getLocaleString("annNewAnnounce")}
       </Text>
       <form onSubmit={handleCreate}>

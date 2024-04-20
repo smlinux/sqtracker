@@ -355,7 +355,7 @@ const Account = ({ token, invites = [], user, userRole }) => {
   return (
     <>
       <SEO title={getLocaleString("accMyAccount")} />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {getLocaleString("accMyAccount")}
       </Text>
       {userRole === "admin" && (

@@ -30,7 +30,7 @@ const Category = ({ results, token }) => {
   return (
     <>
       <SEO title={`${getLocaleString("navBrowse")}  ${category}`} />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {getLocaleString("navBrowse")} {category}
       </Text>
       {torrents.length ? (

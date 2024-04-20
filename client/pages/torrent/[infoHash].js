@@ -539,10 +539,10 @@ const Torrent = ({ token, torrent = {}, userId, userRole, uid, userStats }) => {
         justifyContent="space-between"
         mb={5}
       >
-        <Text as="h1" mb={[4, 0]}>
+        <Text as="h2" mb={[4, 0]}>
           {torrent.name}
           {(torrent.freeleech || SQ_SITE_WIDE_FREELEECH === true) && (
-            <Text as="span" fontSize={3} color="primary" ml={3}>
+            <Text as="span" fontSize={1} color="primary" ml={3}>
               {getLocaleString("torrFL")}
             </Text>
           )}

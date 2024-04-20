@@ -79,7 +79,7 @@ const Report = ({ report, token, userRole }) => {
         justifyContent="space-between"
         mb={3}
       >
-        <Text as="h1">
+        <Text as="h2">
           {getLocaleString("repRepOn")} “{report.torrent.name}”
         </Text>
         <Button onClick={handleResolve}>

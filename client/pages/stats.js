@@ -33,7 +33,7 @@ const Stats = ({ stats, userRole }) => {
   return (
     <>
       <SEO title={getLocaleString("statTrackerStat")} />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {getLocaleString("statTrackerStat")}
       </Text>
       <StyledTable>

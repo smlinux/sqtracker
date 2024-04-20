@@ -129,7 +129,7 @@ const Wiki = ({ page, allPages, token, userRole, slug }) => {
         justifyContent="space-between"
         mb={3}
       >
-        <Text as="h1">{page?.title ?? `${SQ_SITE_NAME} wiki`}</Text>
+        <Text as="h2">{page?.title ?? `${SQ_SITE_NAME} wiki`}</Text>
         {userRole === "admin" && !editing && (
           <Box display="flex" alignItems="center">
             <Link href="/wiki/new" passHref>

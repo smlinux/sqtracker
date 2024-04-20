@@ -83,7 +83,7 @@ const Register = ({ token: inviteToken, tokenError }) => {
     return (
       <>
         <SEO title={getLocaleString("register")} />
-        <Text as="h1" mb={5}>
+        <Text as="h2" mb={5}>
           {getLocaleString("register")}
         </Text>
         <p>{getLocaleString("registrationClosed")}.</p>
@@ -94,7 +94,7 @@ const Register = ({ token: inviteToken, tokenError }) => {
   return (
     <>
       <SEO title={getLocaleString("register")} />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {getLocaleString("register")}
       </Text>
       {!tokenError ? (

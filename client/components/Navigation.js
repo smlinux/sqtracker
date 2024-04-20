@@ -167,84 +167,84 @@ const Navigation = ({ isMobile, menuIsOpen, setMenuIsOpen }) => {
             <Box display="grid" gridAutoFlow="row" gridGap={0}>
               <Link href="/" passHref>
                 <NavLink>
-                  <Text>{getLocaleString("navHome")}</Text>
-                  <Home size={24} />
+                  <Text fontSize={1}>{getLocaleString("navHome")}</Text>
+                  <Home size={16} />
                 </NavLink>
               </Link>
               <Link href="/categories" passHref>
                 <NavLink>
-                  <Text>{getLocaleString("navBrowse")}</Text>
-                  <ListUl size={24} />
+                  <Text fontSize={1}>{getLocaleString("navBrowse")}</Text>
+                  <ListUl size={16} />
                 </NavLink>
               </Link>
               <Link href="/search" passHref>
                 <NavLink>
-                  <Text>{getLocaleString("navSearch")}</Text>
-                  <Search size={24} />
+                  <Text fontSize={1}>{getLocaleString("navSearch")}</Text>
+                  <Search size={16} />
                 </NavLink>
               </Link>
               <Link href="/upload" passHref>
                 <NavLink>
-                  <Text>{getLocaleString("navUpload")}</Text>
-                  <Upload size={24} />
+                  <Text fontSize={1}>{getLocaleString("navUpload")}</Text>
+                  <Upload size={16} />
                 </NavLink>
               </Link>
               <Link href="/requests" passHref>
                 <NavLink>
-                  <Text>{getLocaleString("navRequests")}</Text>
-                  <MessageAdd size={24} />
+                  <Text fontSize={1}>{getLocaleString("navRequests")}</Text>
+                  <MessageAdd size={16} />
                 </NavLink>
               </Link>
               <Link href="/announcements" passHref>
                 <NavLink>
-                  <Text>{getLocaleString("navAnnouncements")}</Text>
-                  <News size={24} />
+                  <Text fontSize={1}>{getLocaleString("navAnnouncements")}</Text>
+                  <News size={16} />
                 </NavLink>
               </Link>
               <Link href="/wiki" passHref>
                 <NavLink>
-                  <Text>{getLocaleString("navWiki")}</Text>
-                  <BookOpen size={24} />
+                  <Text fontSize={1}>{getLocaleString("navWiki")}</Text>
+                  <BookOpen size={16} />
                 </NavLink>
               </Link>
               <Link href="/rss" passHref>
                 <NavLink>
-                  <Text>{getLocaleString("navRSS")}</Text>
-                  <Rss size={24} />
+                  <Text fontSize={1}>{getLocaleString("navRSS")}</Text>
+                  <Rss size={16} />
                 </NavLink>
               </Link>
               <Link href="/bookmarks" passHref>
                 <NavLink>
-                  <Text>{getLocaleString("navBookmarks")}</Text>
-                  <Bookmark size={24} />
+                  <Text fontSize={1}>{getLocaleString("navBookmarks")}</Text>
+                  <Bookmark size={16} />
                 </NavLink>
               </Link>
               <Link href={`/user/${username}`} passHref>
                 <NavLink highlights={["/account"]}>
-                  <Text>{username}</Text>
-                  <User size={24} />
+                  <Text fontSize={1}>{username}</Text>
+                  <User size={16} />
                 </NavLink>
               </Link>
               {role === "admin" && (
                 <>
                   <Link href="/reports" passHref>
                     <NavLink highlights={["/reports"]}>
-                      <Text>{getLocaleString("navReports")}</Text>
-                      <Error size={24} />
+                      <Text fontSize={1}>{getLocaleString("navReports")}</Text>
+                      <Error size={16} />
                     </NavLink>
                   </Link>
                   <Link href="/stats" passHref>
                     <NavLink highlights={["/stats"]}>
-                      <Text>{getLocaleString("navStats")}</Text>
-                      <TrendingUp size={24} />
+                      <Text fontSize={1}>{getLocaleString("navStats")}</Text>
+                      <TrendingUp size={16} />
                     </NavLink>
                   </Link>
                 </>
               )}
               <Link href="/logout" passHref>
                 <NavLink mt={5}>
-                  <Text>{getLocaleString("navLogOut")}</Text>
-                  <LogOutCircle size={24} />
+                  <Text fontSize={1}>{getLocaleString("navLogOut")}</Text>
+                  <LogOutCircle size={16} />
                 </NavLink>
               </Link>
             </Box>
@@ -252,16 +252,16 @@ const Navigation = ({ isMobile, menuIsOpen, setMenuIsOpen }) => {
             <Box display="grid" gridAutoFlow="row" gridGap={0}>
               <Link href="/login" passHref>
                 <NavLink>
-                  <Text>{getLocaleString("logIn")}</Text>
-                  <LogInCircle size={24} />
+                  <Text fontSize={1}>{getLocaleString("logIn")}</Text>
+                  <LogInCircle size={16} />
                 </NavLink>
               </Link>
               {(SQ_ALLOW_REGISTER === "open" ||
                 SQ_ALLOW_REGISTER === "invite") && (
                 <Link href="/register" passHref>
                   <NavLink>
-                    <Text>{getLocaleString("register")}</Text>
-                    <UserPlus size={24} />
+                    <Text fontSize={1}>{getLocaleString("register")}</Text>
+                    <UserPlus size={16} />
                   </NavLink>
                 </Link>
               )}
@@ -269,14 +269,14 @@ const Navigation = ({ isMobile, menuIsOpen, setMenuIsOpen }) => {
                 <>
                   <Link href="/categories" passHref>
                     <NavLink>
-                      <Text>{getLocaleString("navBrowse")}</Text>
-                      <ListUl size={24} />
+                      <Text fontSize={1}>{getLocaleString("navBrowse")}</Text>
+                      <ListUl size={16} />
                     </NavLink>
                   </Link>
                   <Link href="/wiki" passHref>
                     <NavLink>
-                      <Text>{getLocaleString("navWiki")}</Text>
-                      <BookOpen size={24} />
+                      <Text fontSize={1}>{getLocaleString("navWiki")}</Text>
+                      <BookOpen size={16} />
                     </NavLink>
                   </Link>
                 </>

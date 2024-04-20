@@ -61,7 +61,7 @@ const FinalisePasswordReset = ({ token, email, tokenError }) => {
   return (
     <>
       <SEO title={getLocaleString("resetPassword")} />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {getLocaleString("resetPassword")}
       </Text>
       <Input

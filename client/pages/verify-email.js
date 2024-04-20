@@ -56,7 +56,7 @@ const VerifyEmail = () => {
   return (
     <>
       <SEO title={getLocaleString("veVerifyEmail")} />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {getLocaleString("veVerifyEmail")}
       </Text>
       {!tokenError ? (

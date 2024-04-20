@@ -137,7 +137,7 @@ const NewWiki = ({ token, userRole }) => {
   return (
     <>
       <SEO title={getLocaleString("wikiNewPage")} />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {getLocaleString("wikiNewPage")}
       </Text>
       <form onSubmit={handleCreate}>

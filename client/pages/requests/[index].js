@@ -225,7 +225,7 @@ const Request = ({ request, token, user }) => {
         mb={3}
       >
         <Box display="flex" alignItems="center">
-          <Text as="h1">{request.title}</Text>
+          <Text as="h2">{request.title}</Text>
         </Box>
         {user === request.createdBy?._id && (
           <Button onClick={handleDelete} variant="secondary">

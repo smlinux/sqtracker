@@ -78,7 +78,7 @@ const EditAnnouncement = ({ announcement, token, userRole }) => {
   return (
     <>
       <SEO title={getLocaleString("annEditAnnounce")} />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {getLocaleString("annEditAnnounce")}
       </Text>
       <form onSubmit={handleCreate}>

@@ -107,7 +107,7 @@ const User = ({ token, user, userRole }) => {
         mb={3}
       >
         <Box display="flex" alignItems="center">
-          <Text as="h1">
+          <Text as="h2">
             {user.username} {getLocaleString("userProfile")}
           </Text>
           {user.role === "admin" && (

@@ -23,7 +23,7 @@ const Announcements = ({ announcements, pinnedAnnouncements, userRole }) => {
         justifyContent="space-between"
         mb={5}
       >
-        <Text as="h1">{getLocaleString("navAnnouncements")}</Text>
+        <Text as="h2">{getLocaleString("navAnnouncements")}</Text>
         {userRole === "admin" && (
           <Link href="/announcements/new" passHref>
             <a>

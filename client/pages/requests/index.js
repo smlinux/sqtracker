@@ -25,7 +25,7 @@ const Requests = ({ requests }) => {
         justifyContent="space-between"
         mb={5}
       >
-        <Text as="h1">{getLocaleString("navRequests")}</Text>
+        <Text as="h2">{getLocaleString("navRequests")}</Text>
         <Link href="/requests/new" passHref>
           <a>
             <Button>{getLocaleString("reqCreateNew")}</Button>

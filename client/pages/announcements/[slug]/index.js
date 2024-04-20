@@ -178,7 +178,7 @@ const Announcement = ({ announcement, token, userRole }) => {
         mb={3}
       >
         <Box display="flex" alignItems="center">
-          <Text as="h1">{announcement.title}</Text>
+          <Text as="h2">{announcement.title}</Text>
           {pinned && (
             <Box color="grey" ml={3}>
               <Pin size={24} />

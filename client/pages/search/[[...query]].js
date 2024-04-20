@@ -46,7 +46,7 @@ const Search = ({ results, error, token }) => {
             : `${getLocaleString("indexSearch")}`
         }
       />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {query
           ? `${getLocaleString("searchSearchResults")} “${query}”`
           : `${getLocaleString("indexSearch")}`}

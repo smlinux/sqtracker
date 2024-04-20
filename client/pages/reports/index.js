@@ -18,7 +18,7 @@ const Reports = ({ reports, userRole }) => {
   return (
     <>
       <SEO title={getLocaleString("repUnresolvedRep")} />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {getLocaleString("repUnresolvedRep")}
       </Text>
       <List

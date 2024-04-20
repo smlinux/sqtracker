@@ -14,7 +14,7 @@ const Rss = () => {
   return (
     <>
       <SEO title={getLocaleString("navRSS")} />
-      <Text as="h1" mb={4}>
+      <Text as="h2" mb={4}>
         {getLocaleString("navRSS")}
       </Text>
       <Text mb={4}>

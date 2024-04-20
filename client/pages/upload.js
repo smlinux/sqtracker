@@ -363,7 +363,7 @@ const Upload = ({ token, userId }) => {
   return (
     <>
       <SEO title={getLocaleString("uploadUpload")} />
-      <Text as="h1" mb={4}>
+      <Text as="h2" mb={4}>
         {getLocaleString("uploadUpload")}
       </Text>
       <Box mb={5}>

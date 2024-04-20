@@ -10,7 +10,7 @@ const NotFound = () => {
   return (
     <>
       <SEO title={getLocaleString("404NotFound")} />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         404: {getLocaleString("404NotFound")}
       </Text>
       <Text>

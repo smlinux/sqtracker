@@ -68,7 +68,7 @@ const NewRequest = ({ token }) => {
   return (
     <>
       <SEO title={getLocaleString("reqNewRequest")} />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {getLocaleString("reqNewRequest")}
       </Text>
       <form onSubmit={handleCreate}>

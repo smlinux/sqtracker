@@ -35,7 +35,7 @@ const Categories = ({ tags }) => {
   return (
     <>
       <SEO title={getLocaleString("catCategories")} />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {getLocaleString("catCategories")}
       </Text>
       <Box mb={5}>
@@ -64,7 +64,7 @@ const Categories = ({ tags }) => {
           </Text>
         )}
       </Box>
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {getLocaleString("uploadTags")}
       </Text>
       {tags.length ? (

@@ -18,7 +18,7 @@ const Bookmarks = ({ results }) => {
   return (
     <>
       <SEO title={getLocaleString("bmYourBM")} />
-      <Text as="h1" mb={5}>
+      <Text as="h2" mb={5}>
         {getLocaleString("bmYourBM")}
       </Text>
       {results.torrents.length ? (
