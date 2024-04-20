@@ -608,6 +608,35 @@ const Torrent = ({ token, torrent = {}, userId, userRole, uid, userStats }) => {
           )}
         </Box>
       </Box>
+      {torrent.poster && (
+        <Infobox mb={5}>
+          <Box
+            as="img"
+            src={`data:image/${
+              isPngImage(torrent.poster) ? "png" : "jpeg"
+            };base64,${torrent.poster}`}
+            alt={`Cover image for “${torrent.name}”`}
+            width="auto"
+            height="auto"
+            maxWidth="400px"
+            maxHeight="400px"
+          />
+        </Infobox>
+      )}
+      <Infobox mb={5}>
+        <MarkdownBody>
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            {torrent.description}
+          </ReactMarkdown>
+        </MarkdownBody>
+      </Infobox>
+      {torrent.mediaInfo && (
+        <Infobox mb={5}>
+          <Box as="pre" fontFamily="mono" fontSize={1} overflowX="auto">
+            {torrent.mediaInfo}
+          </Box>
+        </Infobox>
+      )}
       <Info
         items={{
           [getLocaleString("torrUploadedBy")]: torrent.anonymous ? (
@@ -665,68 +694,7 @@ const Torrent = ({ token, torrent = {}, userId, userRole, uid, userStats }) => {
               : [getLocaleString("torrNo")],
         }}
       />
-      {torrent.poster && (
-        <Infobox mb={5}>
-          <Text
-            fontWeight={600}
-            fontSize={1}
-            _css={{ textTransform: "uppercase" }}
-            mb={3}
-          >
-            {getLocaleString("posterImage")}
-          </Text>
-          <Box
-            as="img"
-            src={`data:image/${
-              isPngImage(torrent.poster) ? "png" : "jpeg"
-            };base64,${torrent.poster}`}
-            alt={`Cover image for “${torrent.name}”`}
-            width="auto"
-            height="auto"
-            maxWidth="400px"
-            maxHeight="400px"
-          />
-        </Infobox>
-      )}
       <Infobox mb={5}>
-        <Text
-          fontWeight={600}
-          fontSize={1}
-          _css={{ textTransform: "uppercase" }}
-          mb={3}
-        >
-          {getLocaleString("uploadDescription")}
-        </Text>
-        <MarkdownBody>
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
-            {torrent.description}
-          </ReactMarkdown>
-        </MarkdownBody>
-      </Infobox>
-      {torrent.mediaInfo && (
-        <Infobox mb={5}>
-          <Text
-            fontWeight={600}
-            fontSize={1}
-            _css={{ textTransform: "uppercase" }}
-            mb={3}
-          >
-            {getLocaleString("uploadMediaInfo")}
-          </Text>
-          <Box as="pre" fontFamily="mono" fontSize={1} overflowX="auto">
-            {torrent.mediaInfo}
-          </Box>
-        </Infobox>
-      )}
-      <Infobox mb={5}>
-        <Text
-          fontWeight={600}
-          fontSize={1}
-          _css={{ textTransform: "uppercase" }}
-          mb={3}
-        >
-          {getLocaleString("uploadTags")}
-        </Text>
         {torrent.tags.filter((t) => !!t).length ? (
           <Box display="flex" flexWrap="wrap" ml={-1} mt={-1}>
             {torrent.tags.map((tag) => (
