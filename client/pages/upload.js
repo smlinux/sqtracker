@@ -473,7 +473,7 @@ const Upload = ({ token, userId }) => {
                   }))}
                   columns={[
                     {
-                      header: "Similar torrents",
+                      header: {getLocaleString("uploadSimilarTorr")},
                       accessor: "name",
                       cell: ({ value, row }) => (
                         <Text>
@@ -486,7 +486,7 @@ const Upload = ({ token, userId }) => {
                       gridWidth: "1fr",
                     },
                     {
-                      header: "Group?",
+                      header: {getLocaleString("uploadGroupQ")},
                       cell: ({ row }) => (
                         <Box
                           display="flex"
