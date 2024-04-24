@@ -820,10 +820,6 @@ export const removeVote = async (req, res, next) => {
 export const toggleFreeleech = async (req, res, next) => {
   const { infoHash } = req.params;
   try {
-    if (req.userRole !== "admin") {
-      res.status(401).send("You do not have permission to toggle freeleech");
-      return;
-    }
 
     const torrent = await Torrent.findOne({ infoHash }).lean();
 
