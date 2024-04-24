@@ -546,8 +546,7 @@ const Torrent = ({ token, torrent = {}, userId, userRole, uid, userStats }) => {
               {getLocaleString("torrFL")}
             </Text>
           )}
-        </Text>
-        <Box display="flex" alignItems="center" ml={3}>
+          <Text as="a"> </Text>
           {!!userId && (
             <Button
               onClick={handleBookmark}
@@ -562,6 +561,8 @@ const Torrent = ({ token, torrent = {}, userId, userRole, uid, userStats }) => {
               )}
             </Button>
           )}
+        </Text>
+        <Box display="flex" alignItems="center" ml={3}>
           {(userRole === "admin" || userId === torrent.uploadedBy._id) && (
             <>
               <Button
